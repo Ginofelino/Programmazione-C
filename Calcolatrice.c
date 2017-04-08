@@ -59,5 +59,6 @@ int main(){
 		    
 	    	
 		}
+	system("pause");
 	
 }
