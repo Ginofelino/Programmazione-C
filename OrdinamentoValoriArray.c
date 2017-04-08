@@ -32,7 +32,8 @@ int main()
 	   printf("%d\t",vettore[i]);
 	}
    
-   return(0);
+   
    system("pause");
+	return 0;
 }
 
