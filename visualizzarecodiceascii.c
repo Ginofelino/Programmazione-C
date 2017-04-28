@@ -38,7 +38,7 @@ int menu(char p){
 		do{
 			printf("%c\t\t",p);
 			printf("%d\t\t",p);
-			printf("%x\n",&p);
+			printf("%x\n",p);
 			p=p+1;
 		}
 		while(p!=0);
