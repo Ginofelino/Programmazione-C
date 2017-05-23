@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+	menu();
+	system("pause");
+	return 0;
+}
+int menu(){
+	int scelta;
+	printf("\nSelezione:\n");
+	printf("1) Strutture\n");
+	printf("2) Esci\n");
+	scanf("%d",&scelta);
+	if(scelta==1){
+		strutture();
+	}
+	else if(scelta==2){
+		system("exit");
+	}
+	else{
+		printf("Seleziona una delle opzioni elencate\n");
+		menu();
+	}
+}
+int strutture(){
+	int i;
+	float stipendio;
+	char nome[15];
+	char cognome[15];
+	struct persona{
+		char nome[15];
+		char cognome[15];
+		float stipendio;
+	}dipendente[5];
+	
+	for(i=1;i<=5;i++){
+		printf("\nNome del dipendente %d:\n",i);
+		scanf("%s",(dipendente[i].nome));
+		printf("Cognome del dipendente %d:\n",i);
+		scanf("%s",(dipendente[i].cognome));
+		printf("Stipendio del dipendente %d\n",i);
+		scanf("%f",&stipendio);
+		dipendente[i].stipendio=stipendio;
+		
+	}
+	for(i=1;i<=5;i++){
+		printf("\nNome del dipendente %d: %s\n",i,dipendente[i].nome);
+		printf("Cognome del dipendente %d: %s\n",i,dipendente[i].cognome);
+		printf("Stipendio del dipendente %d: %f\n",i,dipendente[i].stipendio);
+			
+	}
+	menu();
+	return 0;
+}
